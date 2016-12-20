@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Submit Form</title>
+<script src="jquery-3.1.0.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+   $(document).ready(function(){
+   	  $("#submitAccount").click(function(){
+          var fname = $("#fname").val();
+          var lname = $("#lname").val();
+          var address = $("#address").val();
+          var cell= $("#cell").val();
+          var salary = $("#salary").val();
+          var bname = $("#bname").val();
+          var anumber = $("#anumber").val();
+   	  });
+   })
+   $(function() {
+  $("registration-form").validate({
+    // Specify validation rules
+    rules: {
+      // The key name on the left side is the name attribute
+      // of an input field. Validation rules are defined
+      // on the right side
+      firstname: "required",
+      lastname: "required",
+      address: "required",
+      bname: "required",
+      
+    },
+    // Specify validation error messages
+    messages: {
+      firstname: "Please enter your firstname",
+      lastname: "Please enter your lastname",
+      address: "Please enter your address",
+      bname: "Please enter your bank name"
+      
+    },
+    
+    submitHandler: function(form) {
+      form.submit();
+    }
+  });
+});
+</script>
+</head>
+<body>
+<div class="row">
+   <div class="col-md-4">
+          <div class="panel panel-default">
+           <div class="panel-heading">
+               <h3 class="panel-title">Activity</h3>
+          </div>
+          <div class="panel-body">
+          <div class="form-group">
+                   <label for="event">Event</label>
+                   <input type="event" id="test" class="form-control" placeholder="Event"/>
+               </div>
+
+              <div class="form-group">
+                   <label for="place">Location</label>
+                   <input type="place" id="test" class="form-control" placeholder="Location"/>
+               </div>
+
+              <div class="form-group">
+                   <label for="time">Time</label>
+                   <input type="text" class="form-control" id="time"/>
+              </div>
+          </div>
+           </div>
+   </div>
+
+   <div class="col-md-8">
+       <div class="panel panel-default">
+           <div class="panel-heading">
+               <h3 class="panel-title">Employee Information</h3>
+           </div>
+           <div class="panel-body">
+               <form class="form-horizontal" id="employeeForm">
+    
+               <div class="form-group ">
+                   <label class="control-label">First Name</label>
+                   <input type="fname" id="fname" class="form-control" placeholder="first name"/>
+               </div>
+
+               <div class="form-group">
+                   <label for="lname">Last Name</label>
+                   <input type="lname" id="lname" class="form-control" placeholder="last name"/>
+              </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="address" class="form-control" id="address">
+                </div>
+
+                <div class="form-group">
+                    <label for="cell">Phone Number</label>
+                    <input type="cell" class="form-control" id="cell" placeholder="(nnn)nnn-nnnn"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="Salary" >Salary</label>
+                      <select name="salary" class="form-control" id="salary">
+	                       <option value="tyoe1">Below 50000</option>
+	                       <option value="type1">Above 50000</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bname">Bank Name</label>
+                    <input type="bname" class="form-control" id="bname"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="anumber">Account Number</label>
+                    <input type="anumber" class="form-control" id="anumber"/>
+                </div>
+
+
+                <label>Account Type</label>
+                  <fieldset class="optiongroup">
+                  <label for="saving">Saving</label>
+                  <input type="radio" name="AType" id="saving" value="saving"/>
+                  <label for="checking">Checking</label>
+                  <input type="radio" name="AType" id="checking" value="checking"/>
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Submit</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please Fill The Form</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+</fieldset>
+</form>
+  </div>
+</div>
+
+
+</body>
+</html>
